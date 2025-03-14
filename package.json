@@ -1,8 +1,8 @@
 {
-  "name": "se-t-h.github.io",
+  "name": "profile",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://se-t-h.github.io",
+  "homepage": "https://se-t-h.github.io/profile",
   "dependencies": {
     "@react-three/drei": "^9.80.0",
     "@react-three/fiber": "^8.13.6",
