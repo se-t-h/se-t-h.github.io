@@ -1,28 +1,26 @@
 {
   "name": "se-t-h.github.io",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://se-t-h.github.io",
   "dependencies": {
-    "@react-three/drei": "^10.0.4",
-    "@react-three/fiber": "^9.1.0",
-    "@react-three/rapier": "^2.0.0",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^13.5.0",
-    "leva": "^0.10.0",
-    "meshline": "^3.3.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "@react-three/drei": "^9.80.0",
+    "@react-three/fiber": "^8.13.6",
+    "@react-three/rapier": "^1.1.1",
+    "leva": "^0.9.35",
+    "meshline": "^3.1.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "three": "^0.174.0",
-    "web-vitals": "^2.1.4"
+    "three": "^0.154.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^5.0.0"
   }
 }
