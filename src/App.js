@@ -4,7 +4,7 @@ import { Canvas, extend, useThree, useFrame } from '@react-three/fiber'
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei'
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier'
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
-import { useControls } from 'leva'
+import { Leva, useControls } from 'leva'
 
 extend({ MeshLineGeometry, MeshLineMaterial })
 useGLTF.preload('/tag.glb')
@@ -14,6 +14,7 @@ export default function App() {
   const { debug } = useControls({ debug: false })
   return (
     <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
+      <Leva hidden />
       <ambientLight intensity={Math.PI} />
       <Physics debug={debug} interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
         <Band />
