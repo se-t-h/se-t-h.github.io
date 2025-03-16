@@ -7,7 +7,7 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 import { Leva, useControls } from 'leva'
 
 extend({ MeshLineGeometry, MeshLineMaterial })
-useGLTF.preload('/tag.glb')
+useGLTF.preload('/badge.glb')
 useTexture.preload('/band.png')
 
 export default function App() {
@@ -34,7 +34,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef() // prettier-ignore
   const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3() // prettier-ignore
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 2, linearDamping: 2 }
-  const { nodes, materials } = useGLTF('/tag.glb')
+  const { nodes, materials } = useGLTF('/badge.glb')
   const texture = useTexture('/band.png')
   const { width, height } = useThree((state) => state.size)
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]))
